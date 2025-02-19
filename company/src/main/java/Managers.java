@@ -1,15 +1,14 @@
-public class Managers {
+public class Managers extends Teams{
     private String name;
     private String surname;
 
     public Managers(String name, String surname) {
-        if (name != null && !name.isEmpty()){
             this.name = name;
-        }
+            setName(name);
 
-        if (surname != null && !surname.isEmpty()){
             this.surname = surname;
-        }
+            setSurname(surname);
+
     }
 
     public String getName() {
@@ -17,7 +16,9 @@ public class Managers {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null && !name.isEmpty()){
+            this.name = name;
+        }
     }
 
     public String getSurname() {
@@ -25,6 +26,8 @@ public class Managers {
     }
 
     public void setSurname(String surname) {
-        this.surname = surname;
+        if (surname != null && !surname.isEmpty()){
+            this.surname = surname;
+        }
     }
 }
